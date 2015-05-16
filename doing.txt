@@ -1,0 +1,33 @@
+SAN
+
+A arquitetura de dispositivos em modo SAN, serve basicamente, para conectar dispositivos de armazenamenot de dados remotos a servidores, de maneira que aparetam que os dispositivos estão ligados fisicamente ao servidor. O servidor se encarregar de distribuir as informações para os cliente e ou aplicativos específicos, muitas das a arquitetura SAN é escolhida pelo sua confiabilidade e perfomance em aplicações críticas. Uma caracteristica do SAN é usar preferencialmente a fibra ótica em suas ligações, permitindo acesso em alta velocidade e acesso simultaneo, e fibra otica é ideal para grandes dados em longas distancias.
+
+A principal vantagem é a opção de expansão e sua facilidade por precisar apenas de adicionar o dispositivo no rack. O acesso de baixo nível, similar ao usado internamente em dispositivos ATA, pois o servidor realizações requesições de blocos específicos ou segmentos de dados.A arquitetura SAN, somente oferece armazenamento de dados, deixamos com que o gerenciamento de diretorios fique com um outro sistema, ou seja implementado.
+Relacionado à usabilidade do SAN, é utilizado por companhias de portes maiores e com trafego intenso de dados/infromações. Algumas das vantagens da SAN é: a recuperação de dados, pois a SAN pode realizar a redundancia de dados para área de armazenamento secundária. Grande disponibilidade do sistema de armazemante, ao balancear a carga de rede, gerando tranferencia rapida de grandes volumes de dados, reduzindo a latência em dispositivos de I/O.
+As desvatagem desta arquitetura de armazenamento são: O elevado custo em relação à implantação e gestão da arquitetura e a falta de um 'padrão' para realização da implementação da arquitetura, pois sempre precirá de softwares e hardwares de outros vendedores, o que aumenta o custo.
+
+NAS
+
+O NAS, é uma arquitetura de armazenamento, com o foco em disponibilidade dos dados/informações aos seu Colaboradores. O NAS possui um sistema operacional completo por apresentar um servidor de arquivos ligado diretamente a rede interna. Ao contrario do SAN, o NAS oferece sistema para gerenciar os arquivos, sendo portanto esta a principal diferença entre estas duas arquiteturas de armazenamento, o NAS oferece protocolos de arquivo enquanto o SAN oferece protocolos de camada, e o sistema de arquivos em cargo dos clientes, mas para garantir que todos tenha acesso aos arquivos, os dispositivos NAS precisam estar ligados à switch, hub, roteador ou aparelho do gênero.
+Algumas das principais vantagens da arqutetura NAS é: Melhorar a perfomance dos servidores, fazendo o compartilhamento de diretorios exclusivamente pelo NAS, poupando o seu trabalho. Aumento da disponibilidade usando a redundancia do RAID e o agrupamento do CLUSTERING. Promove a heterogenia entre os Sistemas Operacionais e arquiteturas dos usuários clientes. E principalmente o baixo custo de implementação e de gestão.
+Agora citarei algumas das desvantagens que arquitetura NAS apresenta: Por ser um sistema com armazenamento de dados/informações, o(s) adminitradores precisam definir cotas para utilizados e gerencia-lás. O uso intenso da NAS prejudica a perfomance da rede, prejudicando os usuários clientes da rede interna. A princiapal desvatagem é o fato da NAS esta limitada pelo harware, pois ele possui uma placa-mãe, processador e memoria propria, estes equipamentos tem uma perfomace que pode deixar a desejar
+
+
+JBOD - Just a bunch os disks
+
+"Apenas um monte de discos", embora relacionadoa ao RAID este modo é diferente, no JBOD os dispositivos - normalmente Discos Rígidos, são apenas concatenados, fazendo com que o espaçamento de armazenamento fique maior, este sistema não proprocional nada relacioado a ganha de desempenho, escabilidade ou confiabilidade, até mesmo porque se um dos dispositivos falhar, somente perderá os dados/informações contidas no dispositivo, resguardando oque esta salvo nos outros dispositivos. 
+Este modo é bastante usado em servidores relacinad
+Uma caracterisca desta arquitetura, é a possibilidade dos discos poderem ser de qualquer tamanho ou peformance, ou tamanho físico ou lógico.
+
+
+
+CLUSTERING (CLUSTER)
+
+
+
+https://errorstream.wordpress.com/2009/02/19/san-e-nas-o-que-sao/ 00:02 08/05/2015
+http://www.tecmundo.com.br/o-que-e/31136-o-que-e-e-para-que-serve-o-nas-network-attached-storage-.htm 00:03 08/05/2015
+http://www.hardware.com.br/tutoriais/das-nas-san/pagina2.html 00:13 08/05/2015
+https://luanmorenodba.wordpress.com/2011/08/12/conceitos-de-armazenamento-de-rede-das-nas-e-san/ 00:46 08/05/2015
+http://pt.wikipedia.org/wiki/JBOD 21:27 08/05/2015
+http://www.hardware.com.br/termos/jbod 21:31 08/05/2015
