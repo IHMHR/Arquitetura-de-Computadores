@@ -221,7 +221,7 @@ http://www.hardware.com.br/tutoriais/das-nas-san/pagina2.html 00:13 08/05/2015
 https://luanmorenodba.wordpress.com/2011/08/12/conceitos-de-armazenamento-de-rede-das-nas-e-san/ 00:46 08/05/2015
 http://pt.wikipedia.org/wiki/JBOD 21:27 08/05/2015
 http:/owrd/www.hardware.com.br/termos/jbod 21:31 08/05/2015
-https://msdn.microsoft.com/pt-br/library/ms179899.aspx 17:54 16/05/2015
+
 https://msdn.microsoft.com/pt-br/library/ms179899.aspx 18:01 16/05/2015
 https://www.connectionstrings.com/sql-server-data-types-reference/ 20:04 16/05/2015
 Tutorial MySQL, Lúke Welling e Laura Thomson
