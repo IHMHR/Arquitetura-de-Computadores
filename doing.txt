@@ -1,3 +1,4 @@
+NKGG6-WBPCC-HXWMY-6DQGJ-CPQVG
 SAN
 
 A arquitetura de dispositivos em modo SAN, serve basicamente, para conectar dispositivos de armazenamenot de dados remotos a servidores, de maneira que aparetam que os dispositivos estão ligados fisicamente ao servidor. O servidor se encarregar de distribuir as informações para os cliente e ou aplicativos específicos, muitas das a arquitetura SAN é escolhida pelo sua confiabilidade e perfomance em aplicações críticas. Uma caracteristica do SAN é usar preferencialmente a fibra ótica em suas ligações, permitindo acesso em alta velocidade e acesso simultaneo, e fibra otica é ideal para grandes dados em longas distancias.
@@ -25,9 +26,204 @@ CLUSTERING (CLUSTER)
 
 
 
+
+ARMAZENAMENTO EM BANCO DE DADOS
+
+Como foi dito pelo proprio professor de Arquitetura de Computadores, banco de dados, são um conjunto de tabelas,views, procedimentos e outros atributos, mas quando nós referimos ao armazenamento de dados\informações, como elas acontecem ?
+tentaremos explicar um pouco melhor como que isso acontece, acontece que o banco é dividio em tabelas, que possuis os seu campos como por exemplo uma tabela tbl_pessoa possui os campos codigo,nome,sobrenome,sexo,datanascimento entre outros dependendo da aplicação.
+mas para que valores fornecidos pelo usuários possam ser armazenados, estes campos possui um 'datatype' para armarzenar os dados, como o idade poderia ser um campo 'integer' ou 1 campo com valores de números inteiro ou o campo sexo poderia ser um capo 'char(1)', ou seja, um campo que armazene somente um carater dentro da coluna do banco de dados.
+com isso, possuimos diversos 'datatypes', uma para cada tipo de dado, como imagens ou até mesmo musicas, mas para que isso ocorro você precisar modificar o arquivo para binario para salvar no banco
+em seguinda irei mencionar e detalhar cada tipo de dados que 1 campo pode ser em algumas dos principais servidores de banco de dados.
+SQL Server
+MySQL
+Oracle
+PostgreSQL
+Sybase
+
+-------------------------------------------------SQLServer--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+com alguns dos datatypes são mais novos, como por exemplo o binary começõu na versão sql server 2008 a esta presente até a mais nova
+Constantes
+ tipos de dados que tem um valor específico, fixo e este valor não se alterar durante a execução ou uso do servidor de banco de dados
+Numericos
+BIGINT
+ armazena numeros de 8 bytes de -2^63 até 2^63-1 
+INT
+ armazena numeros de 4 bytes de -2,147,483,648 até -2,147,483,647
+SMALLINT
+ armazena numeros de 2 bytes de -32,768 até 32,767
+TINYINT
+ armazenam numeros de 1 byte de 0 até 255
+BIT
+ armazenam numeros binários, ou seja, 0 ou 1
+NUMERIC
+ same as decimal
+DECIMAL
+ armazena numeros maiores que o bigint de -10^38+1 até 10^38-1
+MONEY
+ armazena numeros relacioados a dinheiro, de -2^63/10000 até 2^63-1/10000
+SMALLMONEY
+  armazena numeros relacioados a dinheiro, de -214.748,3658 até 2.748,3647
+FLOAT
+ armazena números com frações, de -1,79E + 308 até 1,79E + 308
+REAL
+ armazena números com frações porém com mais capacidade que o Float, de -3,40E +38 até 3,40E +38
+
+
+datas
+DATETIME
+ armazena valores realacioadas a datas e horas, de 1753-01-01 00:00:00.000 até 9999-12-31 23:59:59.997, valores com  8bytes
+SAMLLDATETIME
+ armazena valores relacionados a datas, porém somente a data a hora e o minuto, 1900-01-01 00:00 até 2079-06-06 23:59
+DATE
+ armazena valores somente relacionados a datas, de 0001-01-01 até 9999-12-31, valores com 3 bytes
+TIME
+ armazena valores relacionados a hora, de 00:00:00.0000000 até 23:59:59.9999999
+DATETIME2
+ armazena valores realacioadas a datas e horas, de 0001-01-01 00:00:00.000 até 9999-12-31 23:59:59.997, valores com  8bytes
+*começa antes no ano 1*
+DATETIMEOFFSET
+ armazena valores relacionaos a datas, porém com o UTC formato, de 0001-01-01 00:00:00.0000000 -14:00 até 9999-12-31 23:59:59.9999999 +14:00
+
+
+texto ou letras
+CHAR
+ armazena valores com tamanho fixo, por exemplo CHAR(10), qualquer valor com 10 caracteres, de 0 até 8000 caracteres
+VARCHAR
+ armazena valores com tamanho que pode variar até o máximo estabelecido pelo dba ou que o maximo do datatype, de 0 até 8000 caracteres
+VARCHAR(MAX)
+ armazena valores com tamanho que pode variar, porém com a capacidade maior que o datatype VARCHAR, pois vai até 2^31 caracteres
+TEXT
+ armazenama valores com letras, numeros e caracteres especiais, com capacidade de 2.147.483.647 caracteres
+NCHAR
+ armazenar valores fixos, porem com a metade da capacidade que o datatype CHAR consegue armazenar
+NVARCHAR
+ armazena valores com tamanhos que variam, porem com a mesma particularidade, que é com a metade do datatype VARCHAR
+NTEXT
+ mesma coisa, metade do TEXT
+BINARY
+ armazena valores de binários com capacidade fixa, com capacidade de ate 8000 bytes 
+VARBINARY
+  armazena valores de binários com capacidade que varia de acordo com o dba ou a capacidade maxima, com capacidade de ate 8000 bytes 
+VARBINARY(MAX)
+  armazena valores de binários com capacidade que varia de acordo com o dba ou a capacidade maxima, com capacidade de ate 2^31 bytes 
+
+outros
+IMAGE
+ armazena valores em binario, porem é preferivel usar o datatype varbinary, por esta em desuso e provalvelmente sera removidp
+SQL_VARIANT
+ armazena valores de diferentes tipos com excesao de text,ntex and timestamp
+TIMESTAMP
+ armazena o momento do qual a tabela recebe uma inserção de dados ou alteração de dados
+UNIQUEIDENTIFIER
+ armazena um identificar global unico.
+XML
+ armazena dados XML, ou até mesmo instancia dentro da coluna
+CURSOR
+ De acordo com Rodrigo Crespi - "[...] pois é um objeto que aponta para uma determinada linha dentro de um conjunto. Podendo assim executar operações como: atualizar, excluir ou mover dados."
+TABLE
+ armazena dados para serem processadores posteriomente, usado para armazenamento temporario de conjunto de dados que são retornados de um resultado.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------MySQL----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+numericos
+TINYINT
+ armazenam numeros de 1 byte 2^8
+BIT
+ MYSQL reconhece como tinyint
+BOOL
+ MYSQL reconhece como tinyint
+SMALLINT
+ armazenam numeros de 2 byte 2^16
+INT
+
+MEDIUMINT
+ armazenam numeros de 3 byte 2^24
+BIGINT
+ armazenam numeros de 8 byte 2^64
+NUMERIC ou DECIMAL
+ De acordo com o livro "Tutorial MySQL" os autores citam que, São usadis para armazenar valores exatos como ponto flutuante e geralmente utilizados para armazenar valores monetários.
+FLOAT
+ De acordo com o livro "Tutorial MySQL" os autores citam que, É um número de ponto flutuante com precisão. Pode representar um números positivo entre 1,18x10^-38 e 3,40z10^38 e uma faixa similar de números negativos.
+DOUBLE
+ De acordo com o livro "Tutorial MySQL" os autores citam que, Os sinônimos para DOUBLE são REAL e DOUBLE PRECISION. Eles podem representar um número positivo entre 2.23x01^-308 a 1.80x10^308 e uma faixa similar de númers negativos.
+
+
+texto
+CHAR
+ armazena valores com comprimento fixo, com o valor maximo de 255 caracteres
+VARCHAR
+ armazena valores com comprimento variavel, com o valor maximo de 255 caracteres
+TINYTEXT
+ armazena valores relacionados a texto, com o valor maximo de 255 caracteres
+MEDIUMTEXT
+ armazena valores relacionados a texto, com o valor maximo de 16.777.215 caracteres
+LONGTEXT
+ armazena valores relacionados a texto, com o valor maximo de 4.294.967.295 caracteres
+TEXT
+ armazena valores relacionados a texto, com o valor maximo de 65.535 caracteres
+TINYBLOB
+ armazena dados binarios e são case sensive em buscas, com o valor maximo de 255 caracteres
+MEDIUMBLOB
+ armazena dados binarios e são case sensive em buscas, com o valor maximo de 16.777.215 caracteres
+LONGBLOB
+ armazena dados binarios e são case sensive em buscas, com o valor maximo de 4.294.967.295 caracteres
+BLOB
+ armazena dados binarios e são case sensive em buscas, com o valor maximo de 65.535 caracteres
+ENUM
+ armazena um conjunto de valores possiveis, dentro deste valores pode conter o NULL, e somente pode ter 1 valor escolhido
+SET
+ armazena um conjunto de valores possiveis, deste datatype pode haver 64 elementos, e pode ser escolhido 0 ou diversos escolhidos
+
+data e hora
+DATE
+ armazena valores de datas, no formato YYYY-MM-DD
+TIME
+ armazena valores de horas, no formato HH:MM:SS
+DATETIME
+ armazena valores de datas e horas, no formato YYYY-MM-DD HH:MM:SS
+TIMESTAMP
+ armazena o momento da inserção de dados ou o ultimo momento da alteração de dados
+YEAR
+ armazena valor de ano
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------Sybase--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+numericos
+TINYINT
+ armazena valores numericos de 1 byte, pode ser de 0 até 255
+SMALLINT
+INT ou INTEGER
+ armazena valores numericos de 4 bytes, -2147483648 and 2147483647 ( signed ) or from 0 to 4294967295. ( unisgned )
+BIGINT
+ armazena valores numericos de 8 bytes, -9223372036854775808 and 9223372036854775807 (signed) or from 0 to 18446744073709551615 (unsigned).
+DECIMAL
+ armazenam valores
+NUMERIC
+same as DECIMAL
+DOUBLE
+ armazena valores flutuantes de 8 bytes, 2.2250738585072014e-308 and 1.797693134862315708e+308, o é um numero aproximado, sujeito a erros após arredondamento em operações matemáticas
+FLOAT
+REAL
+SMALLMONEY
+ armazena valores monetários de 4 bits, -214,748.3648 and 214,748.3647
+MONEY
+ armazena valores monetários de 8 bits, -922,337,203,685,477.5808 and 922,337,203,685,477.5807
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 https://errorstream.wordpress.com/2009/02/19/san-e-nas-o-que-sao/ 00:02 08/05/2015
 http://www.tecmundo.com.br/o-que-e/31136-o-que-e-e-para-que-serve-o-nas-network-attached-storage-.htm 00:03 08/05/2015
 http://www.hardware.com.br/tutoriais/das-nas-san/pagina2.html 00:13 08/05/2015
 https://luanmorenodba.wordpress.com/2011/08/12/conceitos-de-armazenamento-de-rede-das-nas-e-san/ 00:46 08/05/2015
 http://pt.wikipedia.org/wiki/JBOD 21:27 08/05/2015
-http://www.hardware.com.br/termos/jbod 21:31 08/05/2015
+http:/owrd/www.hardware.com.br/termos/jbod 21:31 08/05/2015
+https://msdn.microsoft.com/pt-br/library/ms179899.aspx 17:54 16/05/2015
+https://msdn.microsoft.com/pt-br/library/ms179899.aspx 18:01 16/05/2015
+https://www.connectionstrings.com/sql-server-data-types-reference/ 20:04 16/05/2015
+Tutorial MySQL, Lúke Welling e Laura Thomson
+http://www.redcodestudio.com/diferenca-entre-o-tipo-enum-e-set-no-mysql/ 23:09 16/05/2015
+http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32410.1570/doc/html/san1273713853966.html 23:44 16/05/2015
